@@ -3,10 +3,14 @@
 import React, { useRef } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MyForm from './MyForm';
+import PdfPreview from './PdfPreview';
 
 function App() {
   const pdfRef = useRef();
   const pdfPath = process.env.PUBLIC_URL + "/6x6x4-32ECT_DigitalPreview.pdf";
+
+  const [pdfData, setPdfData] = useState({ option: 'A', checked: false });
 
 
   return (
@@ -36,6 +40,10 @@ function App() {
               width="1100"
               height="900"
             ></iframe>
+          </div>
+          <div>
+            <MyForm onUpdate={setPdfData} />
+            <PdfPreview data={pdfData} />
           </div>
           <button className="download-btn" onClick={() => window.open(pdfPath, '_blank')}>
             Download This PDF
