@@ -1,4 +1,4 @@
-//Github pages usable, insert logo (in pdf or image format), choose what size box want (with blank options shownas pdf)
+//Test, insert logo (in pdf or image format), choose what size box want (with blank options shownas pdf)
 
 import React, { useRef } from 'react';
 import logo from './logo.svg';
