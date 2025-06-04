@@ -1,6 +1,6 @@
 //Test, insert logo (in pdf or image format), choose what size box want (with blank options shownas pdf)
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MyForm from './MyForm';
