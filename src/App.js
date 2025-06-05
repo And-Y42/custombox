@@ -31,23 +31,15 @@ function App() {
       <main>
         <section id="pdf-preview" className="section pdf-section">
           <h2>Packaging Design Preview</h2>
-          <div className="pdf-container">
-            <iframe
-              ref={pdfRef}
-              title="Package Design PDF"
-              src={process.env.PUBLIC_URL + "/6x6x4-32ECT_DigitalPreview.pdf"}
-              className="pdf-iframe"
-              width="1100"
-              height="900"
-            ></iframe>
+          <div className="pdf-form-preview-container" style={{ display: 'flex', gap: '2rem' }}>
+            <div>
+              <MyForm onUpdate={setPdfData} />
+            </div>
+            <div style={{ minWidth: 400 }}>
+              {/* Dynamic PDF Preview */}
+              <PdfPreview data={pdfData} />
+            </div>
           </div>
-          <div>
-            <MyForm onUpdate={setPdfData} />
-            <PdfPreview data={pdfData} />
-          </div>
-          <button className="download-btn" onClick={() => window.open(pdfPath, '_blank')}>
-            Download This PDF
-          </button>
         </section>
 
         <section className="section services-section">
