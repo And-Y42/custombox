@@ -5,7 +5,7 @@ import MyPdf from './MyPdf';
 
 function PdfPreview({ data }) {
   return (
-    <PDFViewer width={400} height={600}>
+    <PDFViewer width={700} height={400}>
       <MyPdf {...data} />
     </PDFViewer>
   );

@@ -1,17 +1,18 @@
-//Test, insert logo (in pdf or image format), choose what size box want (with blank options shownas pdf)
-
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MyForm from './MyForm';
-import PdfPreview from './PdfPreview';
+import MyForm from './MyForm';      // Your improved form
+import MyPdf from './MyPdf';        // Your improved PDF template
+import { PDFViewer } from '@react-pdf/renderer';  // For in-browser PDF preview
 
 function App() {
-  const pdfRef = useRef();
-  const pdfPath = process.env.PUBLIC_URL + "/6x6x4-32ECT_DigitalPreview.pdf";
-
-  const [pdfData, setPdfData] = useState({ option: 'A', checked: false });
-
+  // This state tracks all form fields
+  const [pdfData, setPdfData] = useState({
+    orderNo: '',
+    weight: '',
+    dimension: '6x6x6',
+    material: 'White',
+  });
 
   return (
     <div className="App">
@@ -36,8 +37,10 @@ function App() {
               <MyForm onUpdate={setPdfData} />
             </div>
             <div style={{ minWidth: 400 }}>
-              {/* Dynamic PDF Preview */}
-              <PdfPreview data={pdfData} />
+              {/* Modern Dynamic PDF Preview */}
+              <PDFViewer width={1200} height={600}>
+                <MyPdf {...pdfData} />
+              </PDFViewer>
             </div>
           </div>
         </section>
