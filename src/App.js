@@ -19,7 +19,7 @@ function App() {
       <header className="App-header packaging-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div>
-          <h1>BoxPro Packaging Solutions</h1>
+          <h1>InkWise Packaging Solutions</h1>
           <p>
             Custom packaging for every product, delivered fast and reliable.
           </p>
@@ -68,10 +68,9 @@ function App() {
         </section>
 
         <section className="section about-section">
-          <h2>About BoxPro</h2>
+          <h2>About InkWise</h2>
           <p>
-            BoxPro is trusted by hundreds of businesses for creative, sturdy, and affordable packaging. 
-            We help you stand out on the shelf and protect your products with innovative, reliable box solutions.
+            Description
           </p>
         </section>
 
@@ -84,7 +83,7 @@ function App() {
             <button type="submit">Send Message</button>
           </form>
           <div className="contact-info">
-            <p>Email: info@boxpro.com</p>
+            <p>Email: info@inkwise.com</p>
             <p>Phone: (555) 123-4567</p>
             <p>123 Package Ave, Box City, USA</p>
           </div>
@@ -92,7 +91,7 @@ function App() {
       </main>
 
       <footer className="App-footer">
-        <p>© {new Date().getFullYear()} BoxPro Packaging Solutions. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} InkWise Packaging Solutions. All rights reserved.</p>
       </footer>
     </div>
   );
