@@ -8,7 +8,7 @@ import box_12x12x12 from './box_layouts/12x12x12.png';
 import box_8x8x8 from './box_layouts/8x8x8.png';
 import box_10x10x10 from './box_layouts/10x10x10.png';
 import box_12x6x6 from './box_layouts/12x6x6.png';
-import box_8x8x4 from './box_layouts/8x8x4.png';
+//import box_8x8x4 from './box_layouts/8x8x4.png';
 import box_14x14x14 from './box_layouts/14x14x14.png';
 
 const boxLayoutPaths = {
@@ -20,7 +20,7 @@ const boxLayoutPaths = {
   '6x6x4': box_6x6x4,
   '10x10x10': box_10x10x10,
   '12x6x6': box_12x6x6,
-  '8x8x4': box_8x8x4,
+  //'8x8x4': box_8x8x4,
   '14x14x14': box_14x14x14,
 };
 
